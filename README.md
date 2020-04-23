@@ -1,4 +1,4 @@
-# docker-sbt
+# sbt-dind: (sbt alongwith docker in docker environment)
 In one scenario, I had to create an SBT container for scala code compilation, and publishing images through SBT's `docker native packager` plugin.
 So to facilitate me in that scenario, I created a docker image from official `docker` image which supports docker in docker use-case. While creating a docker container I am mounting `/var/run/docker.sock` inside container so that the docker service will create sibling containers or images with host machine's docker service. You can read further about it [here](https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/)
 
